@@ -21,18 +21,18 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   height: 100vh;
   background-color: var(--very-dark-blue);
   background-image: url("./images/bg-desktop.png");
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: contain;
+  background-size: 100% 50%;
 }
 
 .card-left {
   background-color: var(--dark-blue);
-  width: 15rem;
+  width: 17rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -68,6 +68,7 @@ p {
   color: var(--pale-blue);
   border-radius: 0.7rem;
   margin-top: 1.8rem;
+  position: relative;
 }
 
 .progress-bar {
@@ -114,8 +115,8 @@ p {
 
 .popup {
   position: absolute;
-  top: 14rem;
-  right: 22rem;
+  top: -2.5rem;
+  right: 2rem;
   background-color: var(--pale-blue);
   color: #000;
   padding: 1rem 2rem;
@@ -124,18 +125,11 @@ p {
 
 .popup::after {
   content: "";
-  position: relative;
-  background-color: var(--pale-blue);
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid var(--dark-blue);
-  border-top: 21px solid transparent;
-  clear: both;
-  top: 1.845rem;
-  left: 6.953rem;
-  display: inline-block;
-  transform: rotate(90deg);
+  position: absolute;
+  border: 15px solid transparent;
+  border-right-color: var(--pale-blue);
+  top: 3.4rem;
+  right: 0;
 }
 
 .popup p {
@@ -157,22 +151,29 @@ p {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    padding: 0 2.5rem;
+    width: 100%;
   }
 
   .card-left {
-    padding-left: 2.5rem;
+    width: 100%;
+    padding: 0;
+    /* margin: 0 2rem; */
   }
 
   .card-right {
     text-align: center;
     width: 100%;
-    padding: 2rem 1rem 3rem 1rem;
+    height: 15%;
+    /* padding: 2rem 1rem 3rem 1rem; */
+    padding: 0;
+    /* margin: 0 2rem; */
   }
 
   .popup {
-    top: 33rem;
-    right: 6rem;
+    position: static;
+    width: 40%;
+    margin: 0 auto;
+    transform: translateY(2.5rem);
     color: #000;
     padding: 1rem 2rem;
     border-radius: 0.7rem 0.7rem 0.7rem 0.7rem;
